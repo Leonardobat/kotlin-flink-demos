@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.fsmdemo
+package io.github.leonardobat.fsmdemo
 
 import kotlinx.coroutines.runBlocking
 import org.apache.flink.api.common.functions.RichFlatMapFunction

@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.fsmdemo
+package io.github.leonardobat.fsmdemo
 
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test

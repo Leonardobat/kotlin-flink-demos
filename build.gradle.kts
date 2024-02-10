@@ -4,7 +4,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-group = "io.github.leonardobat.study"
+group = "io.github.leonardobat"
 version = "1.0-SNAPSHOT"
 
 repositories {

@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.fsmdemo
+package io.github.leonardobat.fsmdemo
 
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
 import org.apache.logging.log4j.kotlin.KotlinLogger

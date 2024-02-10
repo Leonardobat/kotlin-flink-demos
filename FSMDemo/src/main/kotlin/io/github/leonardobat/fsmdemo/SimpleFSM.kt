@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.fsmdemo
+package io.github.leonardobat.fsmdemo
 
 import org.apache.logging.log4j.kotlin.KotlinLogger
 import org.apache.logging.log4j.kotlin.logger

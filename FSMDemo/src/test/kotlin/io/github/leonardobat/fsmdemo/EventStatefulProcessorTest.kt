@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.fsmdemo
+package io.github.leonardobat.fsmdemo
 
 import org.apache.flink.api.common.typeinfo.Types
 import org.apache.flink.streaming.api.operators.StreamFlatMap
