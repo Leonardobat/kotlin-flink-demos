@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.kafkademo
+package io.github.leonardobat.kafkademo
 
 import org.apache.flink.api.common.functions.RichFlatMapFunction
 import org.apache.flink.api.common.state.ValueState

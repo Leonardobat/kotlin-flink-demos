@@ -3,9 +3,13 @@ import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
 plugins {
     kotlin("jvm")
     id("org.jlleitschuh.gradle.ktlint")
+    id("com.github.johnrengelman.shadow")
+
+    java
+    application
 }
 
-group = "io.github.leonardobat.study"
+group = "io.github.leonardobat"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -32,10 +36,14 @@ tasks.test {
     }
 }
 
+application {
+    mainClass = "io.github.leonardobat.kafkademo.ApplicationKt"
+}
+
 dependencies {
-    implementation("org.apache.flink:flink-streaming-java:$flinkVersion")
+    compileOnly("org.apache.flink:flink-streaming-java:$flinkVersion")
     implementation("org.apache.flink:flink-clients:$flinkVersion")
-    implementation("org.apache.flink:flink-connector-kafka:3.0.2-1.18")
+    implementation("org.apache.flink:flink-connector-kafka:3.1.0-1.18")
     implementation("org.apache.flink:flink-connector-base:$flinkVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1")

@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.kafkademo
+package io.github.leonardobat.kafkademo
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.apache.flink.api.common.serialization.AbstractDeserializationSchema

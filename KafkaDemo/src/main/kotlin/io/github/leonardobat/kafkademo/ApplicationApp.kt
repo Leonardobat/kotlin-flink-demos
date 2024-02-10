@@ -1,4 +1,4 @@
-package io.github.leonardobat.study.kafkademo
+package io.github.leonardobat.kafkademo
 
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory

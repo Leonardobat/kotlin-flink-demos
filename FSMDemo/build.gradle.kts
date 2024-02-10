@@ -3,7 +3,7 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint")
 }
 
-group = "io.github.leonardobat.study"
+group = "io.github.leonardobat"
 version = "1.0-SNAPSHOT"
 
 repositories {

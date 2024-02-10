@@ -1,6 +1,10 @@
 package io.github.leonardobat.study.kafkademo
 
 import com.typesafe.config.ConfigFactory
+import io.github.leonardobat.kafkademo.ApplicationApp
+import io.github.leonardobat.kafkademo.Event
+import io.github.leonardobat.kafkademo.EventDeserializer
+import io.github.leonardobat.kafkademo.EventSerializer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -40,7 +44,6 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import org.testcontainers.utility.DockerImageName
 import java.time.Duration
 import java.util.Properties
-import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 
 @Testcontainers
