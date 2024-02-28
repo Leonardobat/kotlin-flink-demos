@@ -1,10 +1,7 @@
----
 version: "3.8"
 services:
   broker:
     image: confluentinc/cp-kafka:7.5.3
-    hostname: broker
-    container_name: broker
     ports:
       - "9092:9092"
       - "9101:9101"
@@ -49,12 +46,13 @@ services:
   jobmanager:
     image: flink-kafka-demo
     depends_on:
+      - jitserver
       - init-broker
     ports:
       - "8081:8081"
     entrypoint: [ '/bin/sh', '-c' ]
     command: |
-      "      
+      "
       sleep 20
       /entrypoint.sh standalone-job --job-classname io.github.leonardobat.kafkademo.ApplicationKt
       "
@@ -64,15 +62,17 @@ services:
       - |
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager
-        parallelism.default: 2        
+        parallelism.default: 2
+        env.java.opts.jobmanager: -XX:JITServerAddress=jitserver -XX:+RequireJITServer
 
   taskmanager:
     image: flink-kafka-demo
     depends_on:
+      - jitserver
       - jobmanager
     entrypoint: [ '/bin/sh', '-c' ]
     command: |
-      "      
+      "
       sleep 20
       /entrypoint.sh taskmanager
       "
@@ -85,3 +85,12 @@ services:
         jobmanager.rpc.address: jobmanager
         taskmanager.numberOfTaskSlots: 2
         parallelism.default: 2
+        env.java.opts.taskmanager: -XX:JITServerAddress=jitserver -XX:+RequireJITServer
+
+  jitserver:
+    image: ibm-semeru-runtimes:open-21-jre-jammy
+    command: jitserver
+    deploy:
+      replicas: 1
+    environment:
+      - JAVA_OPTS=-XX:+JITServerLogConnections
