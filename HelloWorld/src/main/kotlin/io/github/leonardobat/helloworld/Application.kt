@@ -2,7 +2,10 @@ package io.github.leonardobat.helloworld
 
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
 
-fun main(args: Array<String>) {
+/**
+ * Main function of the program.
+ */
+fun main() {
     // Set up the execution environment
     val env = StreamExecutionEnvironment.getExecutionEnvironment()
 
