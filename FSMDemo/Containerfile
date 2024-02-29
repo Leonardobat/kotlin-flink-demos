@@ -1,0 +1,3 @@
+FROM flink-openj9
+USER flink
+COPY build/libs/FSMDemo-*.jar /opt/flink/usrlib/FSMDemo.jar

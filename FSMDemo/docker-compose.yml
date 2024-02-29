@@ -4,7 +4,7 @@ services:
     image: flink-hello-world
     ports:
       - "8081:8081"
-    command: standalone-job --job-classname io.github.leonardobat.helloworld.ApplicationKt
+    command: standalone-job --job-classname io.github.leonardobat.fsmdemo.ApplicationKt
     environment:
       - |
         FLINK_PROPERTIES=
