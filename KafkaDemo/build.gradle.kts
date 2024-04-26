@@ -16,7 +16,7 @@ repositories {
     mavenCentral()
 }
 
-val flinkVersion = "1.18.1"
+val flinkVersion = "1.19.0"
 
 tasks.test {
     useJUnitPlatform()
@@ -46,16 +46,16 @@ dependencies {
     implementation("org.apache.flink:flink-clients:$flinkVersion")
     implementation("org.apache.flink:flink-connector-kafka:3.1.0-1.18")
     implementation("org.apache.flink:flink-connector-base:$flinkVersion")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1")
-    implementation(platform("org.apache.logging.log4j:log4j-bom:2.22.1"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.0")
+    implementation(platform("org.apache.logging.log4j:log4j-bom:2.23.1"))
     implementation("org.apache.logging.log4j:log4j-api-kotlin:1.4.0")
-    implementation(platform("io.insert-koin:koin-bom:3.5.3"))
+    implementation(platform("io.insert-koin:koin-bom:3.5.6"))
     implementation("io.insert-koin:koin-core")
     implementation("io.insert-koin:koin-core-coroutines")
-    implementation("com.typesafe:config:1.4.1")
+    implementation("com.typesafe:config:1.4.3")
 
-    testImplementation(platform("org.junit:junit-bom:5.10.1"))
+    testImplementation(platform("org.junit:junit-bom:5.10.2"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("io.insert-koin:koin-test")
     testImplementation("io.insert-koin:koin-test-junit5")
@@ -64,8 +64,8 @@ dependencies {
     testImplementation("org.testcontainers:testcontainers")
     testImplementation("org.testcontainers:kafka")
     testImplementation("org.testcontainers:junit-jupiter")
-    testImplementation("org.apache.kafka:kafka-clients:3.6.1")
-    testImplementation("org.awaitility:awaitility-kotlin:4.2.0")
+    testImplementation("org.apache.kafka:kafka-clients:3.7.0")
+    testImplementation("org.awaitility:awaitility-kotlin:4.2.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 

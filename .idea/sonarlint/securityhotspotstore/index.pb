@@ -19,8 +19,6 @@ z
 JHelloWorld/src/main/kotlin/io/github/leonardobat/helloworld/Application.kt,c/5/c5bf207709f68fdae22da896ed9dfba1a667bb46
 M
 HelloWorld/docker-compose.yml,1/b/1b0a0846a1517b8af7f2e1ccdc9c4d9960fdd812
-E
-HelloWorld/Dockerfile,5/0/506433113a7aa61b3e4db957c10c237d14d5253d
 x
 HKafkaDemo/src/main/kotlin/io/github/leonardobat/kafkademo/Application.kt,f/d/fd8de6e8fd63678896a5acdcd75dfd6b9a1eb95d
 {
@@ -62,15 +60,9 @@ A
 gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
 H
 FSMDemo/build.gradle.kts,3/6/3644cfaf8e0d2355b173a36a7b8a72b058f59a1c
-D
-KafkaDemo/Dockerfile,9/6/965c5f8f6ea443c73613e50a0c21d1d02c17456f
 ƒ
 SKafkaDemo/src/main/kotlin/io/github/leonardobat/kafkademo/EventStatefulProcessor.kt,c/2/c22604368aba9028605368e81529422b2ba2bf86
 ^
 .KafkaDemo/src/main/resources/log4j2.properties,d/0/d0d3b1ec9080c31aab655e13774c73fc0a57596e
-P
- JITServerDemo/docker-compose.yml,7/e/7e6e7438d285ceb4dd2b1dddf3493d3dd1e7d879
-H
-JITServerDemo/Dockerfile,f/9/f975540ba5ffc71a3cce661297d07077e5896d49
-v
-FJITServerDemo/src/main/kotlin/io/github/leonardobat/kafkademo/Event.kt,0/4/049a076e1fc582a0aedc6de95013730e87dce4be
+J
+FSMDemo/docker-compose.yml,f/e/fef70d939deba786cafebfdb2b03799a634fd1c3
