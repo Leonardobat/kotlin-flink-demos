@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/FSMDemo" />
             <option value="$PROJECT_DIR$/HelloWorld" />
             <option value="$PROJECT_DIR$/KafkaDemo" />
+            <option value="$PROJECT_DIR$/WindowDemo" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,0 +1,24 @@
+---
+services:
+  jobmanager:
+    image: flink-hello-world
+    ports:
+      - "8081:8081"
+    command: standalone-job --job-classname io.github.leonardobat.helloworld.ApplicationKt
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        parallelism.default: 2
+
+  taskmanager:
+    image: flink-hello-world
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 2
+        parallelism.default: 2

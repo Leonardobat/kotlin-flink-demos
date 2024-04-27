@@ -5,3 +5,4 @@ rootProject.name = "kotlin-flink-demos"
 include("HelloWorld")
 include("FSMDemo")
 include("KafkaDemo")
+include("WindowDemo")
